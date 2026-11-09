@@ -1,0 +1,477 @@
+2026-11-09 23:27:49 [main] INFO  edu.melnik.task.port.Main - Start
+2026-11-09 23:27:49 [main] INFO  melnik.task.port.config.PortConfigReader - # Конфигурация порта
+2026-11-09 23:27:49 [main] INFO  melnik.task.port.config.PortConfigReader - warehouse_capacity=100
+2026-11-09 23:27:49 [main] INFO  melnik.task.port.config.PortConfigReader - warehouse_initial=30
+2026-11-09 23:27:49 [main] INFO  melnik.task.port.config.PortConfigReader - berths=3
+2026-11-09 23:27:49 [main] INFO  melnik.task.port.config.PortConfigReader - 
+2026-11-09 23:27:49 [main] INFO  melnik.task.port.config.PortConfigReader - # Корабли: ship:имя:вместимость:контейнеры_на_разгрузку:контейнеры_на_загрузку
+2026-11-09 23:27:49 [main] INFO  melnik.task.port.config.PortConfigReader - ship:Neptune:50:20:15
+2026-11-09 23:27:49 [main] INFO  melnik.task.port.config.PortConfigReader - ship:Poseidon:40:10:25
+2026-11-09 23:27:49 [main] INFO  melnik.task.port.config.PortConfigReader - ship:Atlantic:60:30:20
+2026-11-09 23:27:49 [main] INFO  melnik.task.port.config.PortConfigReader - ship:Viking:45:15:10
+2026-11-09 23:27:49 [main] INFO  melnik.task.port.config.PortConfigReader - ship:Titan:55:25:30
+2026-11-09 23:27:49 [main] INFO  edu.melnik.task.port.Main - Конфигурация загружена: склад=30/100, причалов=3, кораблей=5
+2026-11-09 23:27:49 [pool-2-thread-2] INFO  melnik.task.port.model.Ship - === Корабль [Poseidon] запущен как поток ===
+2026-11-09 23:27:49 [pool-2-thread-1] INFO  melnik.task.port.model.Ship - === Корабль [Neptune] запущен как поток ===
+2026-11-09 23:27:49 [pool-2-thread-1] INFO  task.port.state.impl.ArrivingState - [Neptune] Приближается к порту...
+2026-11-09 23:27:49 [pool-2-thread-2] INFO  task.port.state.impl.ArrivingState - [Poseidon] Приближается к порту...
+2026-11-09 23:27:49 [pool-2-thread-4] INFO  melnik.task.port.model.Ship - === Корабль [Viking] запущен как поток ===
+2026-11-09 23:27:49 [pool-2-thread-4] INFO  task.port.state.impl.ArrivingState - [Viking] Приближается к порту...
+2026-11-09 23:27:49 [pool-2-thread-3] INFO  melnik.task.port.model.Ship - === Корабль [Atlantic] запущен как поток ===
+2026-11-09 23:27:49 [pool-2-thread-3] INFO  task.port.state.impl.ArrivingState - [Atlantic] Приближается к порту...
+2026-11-09 23:27:49 [pool-2-thread-5] INFO  melnik.task.port.model.Ship - === Корабль [Titan] запущен как поток ===
+2026-11-09 23:27:49 [pool-2-thread-5] INFO  task.port.state.impl.ArrivingState - [Titan] Приближается к порту...
+2026-11-09 23:27:50 [pool-2-thread-4] INFO  task.port.state.impl.ArrivingState - [Viking] Достиг порта.
+2026-11-09 23:27:50 [pool-2-thread-3] INFO  task.port.state.impl.ArrivingState - [Atlantic] Достиг порта.
+2026-11-09 23:27:50 [pool-2-thread-5] INFO  task.port.state.impl.ArrivingState - [Titan] Достиг порта.
+2026-11-09 23:27:50 [pool-2-thread-3] INFO  task.port.state.impl.WaitingForBerthState - [Atlantic] Ожидает свободный причал...
+2026-11-09 23:27:50 [pool-2-thread-4] INFO  task.port.state.impl.WaitingForBerthState - [Viking] Ожидает свободный причал...
+2026-11-09 23:27:50 [pool-2-thread-3] INFO  task.port.state.impl.WaitingForBerthState - [Atlantic] Пришвартовался к причалу №1
+2026-11-09 23:27:50 [pool-2-thread-2] INFO  task.port.state.impl.ArrivingState - [Poseidon] Достиг порта.
+2026-11-09 23:27:50 [pool-2-thread-4] INFO  task.port.state.impl.WaitingForBerthState - [Viking] Пришвартовался к причалу №2
+2026-11-09 23:27:50 [pool-2-thread-4] INFO  task.port.state.impl.UnloadingState - [Viking] Начинает разгрузку 15 контейнеров на причале №2
+2026-11-09 23:27:50 [pool-2-thread-3] INFO  task.port.state.impl.UnloadingState - [Atlantic] Начинает разгрузку 30 контейнеров на причале №1
+2026-11-09 23:27:50 [pool-2-thread-2] INFO  task.port.state.impl.WaitingForBerthState - [Poseidon] Ожидает свободный причал...
+2026-11-09 23:27:50 [pool-2-thread-4] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 31/100
+2026-11-09 23:27:50 [pool-2-thread-2] INFO  task.port.state.impl.WaitingForBerthState - [Poseidon] Пришвартовался к причалу №3
+2026-11-09 23:27:50 [pool-2-thread-2] INFO  task.port.state.impl.UnloadingState - [Poseidon] Начинает разгрузку 10 контейнеров на причале №3
+2026-11-09 23:27:50 [pool-2-thread-4] DEBUG task.port.state.impl.UnloadingState - [Viking] Разгружен контейнер 1/15
+2026-11-09 23:27:50 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 32/100
+2026-11-09 23:27:50 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 33/100
+2026-11-09 23:27:50 [pool-2-thread-3] DEBUG task.port.state.impl.UnloadingState - [Atlantic] Разгружен контейнер 1/30
+2026-11-09 23:27:50 [pool-2-thread-1] INFO  task.port.state.impl.ArrivingState - [Neptune] Достиг порта.
+2026-11-09 23:27:50 [pool-2-thread-2] DEBUG task.port.state.impl.UnloadingState - [Poseidon] Разгружен контейнер 1/10
+2026-11-09 23:27:50 [pool-2-thread-1] INFO  task.port.state.impl.WaitingForBerthState - [Neptune] Ожидает свободный причал...
+2026-11-09 23:27:50 [pool-2-thread-5] INFO  task.port.state.impl.WaitingForBerthState - [Titan] Ожидает свободный причал...
+2026-11-09 23:27:50 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 34/100
+2026-11-09 23:27:50 [pool-2-thread-2] DEBUG task.port.state.impl.UnloadingState - [Poseidon] Разгружен контейнер 2/10
+2026-11-09 23:27:50 [pool-2-thread-4] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 35/100
+2026-11-09 23:27:50 [pool-2-thread-4] DEBUG task.port.state.impl.UnloadingState - [Viking] Разгружен контейнер 2/15
+2026-11-09 23:27:50 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 36/100
+2026-11-09 23:27:50 [pool-2-thread-3] DEBUG task.port.state.impl.UnloadingState - [Atlantic] Разгружен контейнер 2/30
+2026-11-09 23:27:51 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 37/100
+2026-11-09 23:27:51 [pool-2-thread-3] DEBUG task.port.state.impl.UnloadingState - [Atlantic] Разгружен контейнер 3/30
+2026-11-09 23:27:51 [pool-2-thread-4] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 38/100
+2026-11-09 23:27:51 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 39/100
+2026-11-09 23:27:51 [pool-2-thread-2] DEBUG task.port.state.impl.UnloadingState - [Poseidon] Разгружен контейнер 3/10
+2026-11-09 23:27:51 [pool-2-thread-4] DEBUG task.port.state.impl.UnloadingState - [Viking] Разгружен контейнер 3/15
+2026-11-09 23:27:51 [pool-2-thread-4] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 40/100
+2026-11-09 23:27:51 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 41/100
+2026-11-09 23:27:51 [pool-2-thread-4] DEBUG task.port.state.impl.UnloadingState - [Viking] Разгружен контейнер 4/15
+2026-11-09 23:27:51 [pool-2-thread-3] DEBUG task.port.state.impl.UnloadingState - [Atlantic] Разгружен контейнер 4/30
+2026-11-09 23:27:51 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 42/100
+2026-11-09 23:27:51 [pool-2-thread-2] DEBUG task.port.state.impl.UnloadingState - [Poseidon] Разгружен контейнер 4/10
+2026-11-09 23:27:51 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 43/100
+2026-11-09 23:27:51 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 44/100
+2026-11-09 23:27:51 [pool-2-thread-3] DEBUG task.port.state.impl.UnloadingState - [Atlantic] Разгружен контейнер 5/30
+2026-11-09 23:27:51 [pool-2-thread-4] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 45/100
+2026-11-09 23:27:51 [pool-2-thread-2] DEBUG task.port.state.impl.UnloadingState - [Poseidon] Разгружен контейнер 5/10
+2026-11-09 23:27:51 [pool-2-thread-4] DEBUG task.port.state.impl.UnloadingState - [Viking] Разгружен контейнер 5/15
+2026-11-09 23:27:51 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 46/100
+2026-11-09 23:27:51 [pool-2-thread-3] DEBUG task.port.state.impl.UnloadingState - [Atlantic] Разгружен контейнер 6/30
+2026-11-09 23:27:51 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 47/100
+2026-11-09 23:27:51 [pool-2-thread-2] DEBUG task.port.state.impl.UnloadingState - [Poseidon] Разгружен контейнер 6/10
+2026-11-09 23:27:51 [pool-2-thread-4] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 48/100
+2026-11-09 23:27:51 [pool-2-thread-4] DEBUG task.port.state.impl.UnloadingState - [Viking] Разгружен контейнер 6/15
+2026-11-09 23:27:51 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 49/100
+2026-11-09 23:27:51 [pool-2-thread-3] DEBUG task.port.state.impl.UnloadingState - [Atlantic] Разгружен контейнер 7/30
+2026-11-09 23:27:51 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 50/100
+2026-11-09 23:27:51 [pool-2-thread-4] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 51/100
+2026-11-09 23:27:51 [pool-2-thread-2] DEBUG task.port.state.impl.UnloadingState - [Poseidon] Разгружен контейнер 7/10
+2026-11-09 23:27:51 [pool-2-thread-4] DEBUG task.port.state.impl.UnloadingState - [Viking] Разгружен контейнер 7/15
+2026-11-09 23:27:51 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 52/100
+2026-11-09 23:27:51 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 53/100
+2026-11-09 23:27:51 [pool-2-thread-3] DEBUG task.port.state.impl.UnloadingState - [Atlantic] Разгружен контейнер 8/30
+2026-11-09 23:27:51 [pool-2-thread-2] DEBUG task.port.state.impl.UnloadingState - [Poseidon] Разгружен контейнер 8/10
+2026-11-09 23:27:51 [pool-2-thread-4] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 54/100
+2026-11-09 23:27:51 [pool-2-thread-4] DEBUG task.port.state.impl.UnloadingState - [Viking] Разгружен контейнер 8/15
+2026-11-09 23:27:51 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 55/100
+2026-11-09 23:27:51 [pool-2-thread-2] DEBUG task.port.state.impl.UnloadingState - [Poseidon] Разгружен контейнер 9/10
+2026-11-09 23:27:51 [pool-2-thread-4] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 56/100
+2026-11-09 23:27:51 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 57/100
+2026-11-09 23:27:51 [pool-2-thread-4] DEBUG task.port.state.impl.UnloadingState - [Viking] Разгружен контейнер 9/15
+2026-11-09 23:27:51 [pool-2-thread-3] DEBUG task.port.state.impl.UnloadingState - [Atlantic] Разгружен контейнер 9/30
+2026-11-09 23:27:52 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 58/100
+2026-11-09 23:27:52 [pool-2-thread-2] DEBUG task.port.state.impl.UnloadingState - [Poseidon] Разгружен контейнер 10/10
+2026-11-09 23:27:52 [pool-2-thread-4] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 59/100
+2026-11-09 23:27:52 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 60/100
+2026-11-09 23:27:52 [pool-2-thread-4] DEBUG task.port.state.impl.UnloadingState - [Viking] Разгружен контейнер 10/15
+2026-11-09 23:27:52 [pool-2-thread-3] DEBUG task.port.state.impl.UnloadingState - [Atlantic] Разгружен контейнер 10/30
+2026-11-09 23:27:52 [pool-2-thread-4] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 61/100
+2026-11-09 23:27:52 [pool-2-thread-2] INFO  task.port.state.impl.UnloadingState - [Poseidon] Разгрузка завершена.
+2026-11-09 23:27:52 [pool-2-thread-4] DEBUG task.port.state.impl.UnloadingState - [Viking] Разгружен контейнер 11/15
+2026-11-09 23:27:52 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 62/100
+2026-11-09 23:27:52 [pool-2-thread-3] DEBUG task.port.state.impl.UnloadingState - [Atlantic] Разгружен контейнер 11/30
+2026-11-09 23:27:52 [pool-2-thread-2] INFO  task.port.state.impl.LoadingState - [Poseidon] Начинает загрузку 25 контейнеров на причале №3
+2026-11-09 23:27:52 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 61/100
+2026-11-09 23:27:52 [pool-2-thread-2] DEBUG task.port.state.impl.LoadingState - [Poseidon] Загружен контейнер 1/25
+2026-11-09 23:27:52 [pool-2-thread-4] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 62/100
+2026-11-09 23:27:52 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 61/100
+2026-11-09 23:27:52 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 62/100
+2026-11-09 23:27:52 [pool-2-thread-2] DEBUG task.port.state.impl.LoadingState - [Poseidon] Загружен контейнер 2/25
+2026-11-09 23:27:52 [pool-2-thread-4] DEBUG task.port.state.impl.UnloadingState - [Viking] Разгружен контейнер 12/15
+2026-11-09 23:27:52 [pool-2-thread-3] DEBUG task.port.state.impl.UnloadingState - [Atlantic] Разгружен контейнер 12/30
+2026-11-09 23:27:52 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 63/100
+2026-11-09 23:27:52 [pool-2-thread-3] DEBUG task.port.state.impl.UnloadingState - [Atlantic] Разгружен контейнер 13/30
+2026-11-09 23:27:52 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 62/100
+2026-11-09 23:27:52 [pool-2-thread-4] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 63/100
+2026-11-09 23:27:52 [pool-2-thread-2] DEBUG task.port.state.impl.LoadingState - [Poseidon] Загружен контейнер 3/25
+2026-11-09 23:27:52 [pool-2-thread-4] DEBUG task.port.state.impl.UnloadingState - [Viking] Разгружен контейнер 13/15
+2026-11-09 23:27:52 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 62/100
+2026-11-09 23:27:52 [pool-2-thread-2] DEBUG task.port.state.impl.LoadingState - [Poseidon] Загружен контейнер 4/25
+2026-11-09 23:27:52 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 63/100
+2026-11-09 23:27:52 [pool-2-thread-3] DEBUG task.port.state.impl.UnloadingState - [Atlantic] Разгружен контейнер 14/30
+2026-11-09 23:27:52 [pool-2-thread-4] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 64/100
+2026-11-09 23:27:52 [pool-2-thread-4] DEBUG task.port.state.impl.UnloadingState - [Viking] Разгружен контейнер 14/15
+2026-11-09 23:27:52 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 65/100
+2026-11-09 23:27:52 [pool-2-thread-4] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 66/100
+2026-11-09 23:27:52 [pool-2-thread-3] DEBUG task.port.state.impl.UnloadingState - [Atlantic] Разгружен контейнер 15/30
+2026-11-09 23:27:52 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 65/100
+2026-11-09 23:27:52 [pool-2-thread-4] DEBUG task.port.state.impl.UnloadingState - [Viking] Разгружен контейнер 15/15
+2026-11-09 23:27:52 [pool-2-thread-2] DEBUG task.port.state.impl.LoadingState - [Poseidon] Загружен контейнер 5/25
+2026-11-09 23:27:53 [pool-2-thread-4] INFO  task.port.state.impl.UnloadingState - [Viking] Разгрузка завершена.
+2026-11-09 23:27:53 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 66/100
+2026-11-09 23:27:53 [pool-2-thread-4] INFO  task.port.state.impl.LoadingState - [Viking] Начинает загрузку 10 контейнеров на причале №2
+2026-11-09 23:27:53 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 65/100
+2026-11-09 23:27:53 [pool-2-thread-3] DEBUG task.port.state.impl.UnloadingState - [Atlantic] Разгружен контейнер 16/30
+2026-11-09 23:27:53 [pool-2-thread-2] DEBUG task.port.state.impl.LoadingState - [Poseidon] Загружен контейнер 6/25
+2026-11-09 23:27:53 [pool-2-thread-4] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 64/100
+2026-11-09 23:27:53 [pool-2-thread-4] DEBUG task.port.state.impl.LoadingState - [Viking] Загружен контейнер 1/10
+2026-11-09 23:27:53 [pool-2-thread-4] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 63/100
+2026-11-09 23:27:53 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 64/100
+2026-11-09 23:27:53 [pool-2-thread-3] DEBUG task.port.state.impl.UnloadingState - [Atlantic] Разгружен контейнер 17/30
+2026-11-09 23:27:53 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 63/100
+2026-11-09 23:27:53 [pool-2-thread-2] DEBUG task.port.state.impl.LoadingState - [Poseidon] Загружен контейнер 7/25
+2026-11-09 23:27:53 [pool-2-thread-4] DEBUG task.port.state.impl.LoadingState - [Viking] Загружен контейнер 2/10
+2026-11-09 23:27:53 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 62/100
+2026-11-09 23:27:53 [pool-2-thread-4] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 61/100
+2026-11-09 23:27:53 [pool-2-thread-2] DEBUG task.port.state.impl.LoadingState - [Poseidon] Загружен контейнер 8/25
+2026-11-09 23:27:53 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 62/100
+2026-11-09 23:27:53 [pool-2-thread-4] DEBUG task.port.state.impl.LoadingState - [Viking] Загружен контейнер 3/10
+2026-11-09 23:27:53 [pool-2-thread-3] DEBUG task.port.state.impl.UnloadingState - [Atlantic] Разгружен контейнер 18/30
+2026-11-09 23:27:53 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 61/100
+2026-11-09 23:27:53 [pool-2-thread-2] DEBUG task.port.state.impl.LoadingState - [Poseidon] Загружен контейнер 9/25
+2026-11-09 23:27:53 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 62/100
+2026-11-09 23:27:53 [pool-2-thread-4] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 61/100
+2026-11-09 23:27:53 [pool-2-thread-3] DEBUG task.port.state.impl.UnloadingState - [Atlantic] Разгружен контейнер 19/30
+2026-11-09 23:27:53 [pool-2-thread-4] DEBUG task.port.state.impl.LoadingState - [Viking] Загружен контейнер 4/10
+2026-11-09 23:27:53 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 62/100
+2026-11-09 23:27:53 [pool-2-thread-3] DEBUG task.port.state.impl.UnloadingState - [Atlantic] Разгружен контейнер 20/30
+2026-11-09 23:27:53 [pool-2-thread-4] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 61/100
+2026-11-09 23:27:53 [pool-2-thread-4] DEBUG task.port.state.impl.LoadingState - [Viking] Загружен контейнер 5/10
+2026-11-09 23:27:53 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 60/100
+2026-11-09 23:27:53 [pool-2-thread-2] DEBUG task.port.state.impl.LoadingState - [Poseidon] Загружен контейнер 10/25
+2026-11-09 23:27:53 [pool-2-thread-4] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 59/100
+2026-11-09 23:27:53 [pool-2-thread-4] DEBUG task.port.state.impl.LoadingState - [Viking] Загружен контейнер 6/10
+2026-11-09 23:27:53 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 58/100
+2026-11-09 23:27:53 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 59/100
+2026-11-09 23:27:53 [pool-2-thread-2] DEBUG task.port.state.impl.LoadingState - [Poseidon] Загружен контейнер 11/25
+2026-11-09 23:27:53 [pool-2-thread-3] DEBUG task.port.state.impl.UnloadingState - [Atlantic] Разгружен контейнер 21/30
+2026-11-09 23:27:54 [pool-2-thread-4] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 58/100
+2026-11-09 23:27:54 [pool-2-thread-4] DEBUG task.port.state.impl.LoadingState - [Viking] Загружен контейнер 7/10
+2026-11-09 23:27:54 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 59/100
+2026-11-09 23:27:54 [pool-2-thread-3] DEBUG task.port.state.impl.UnloadingState - [Atlantic] Разгружен контейнер 22/30
+2026-11-09 23:27:54 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 58/100
+2026-11-09 23:27:54 [pool-2-thread-2] DEBUG task.port.state.impl.LoadingState - [Poseidon] Загружен контейнер 12/25
+2026-11-09 23:27:54 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 59/100
+2026-11-09 23:27:54 [pool-2-thread-3] DEBUG task.port.state.impl.UnloadingState - [Atlantic] Разгружен контейнер 23/30
+2026-11-09 23:27:54 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 58/100
+2026-11-09 23:27:54 [pool-2-thread-2] DEBUG task.port.state.impl.LoadingState - [Poseidon] Загружен контейнер 13/25
+2026-11-09 23:27:54 [pool-2-thread-4] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 57/100
+2026-11-09 23:27:54 [pool-2-thread-4] DEBUG task.port.state.impl.LoadingState - [Viking] Загружен контейнер 8/10
+2026-11-09 23:27:54 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 56/100
+2026-11-09 23:27:54 [pool-2-thread-2] DEBUG task.port.state.impl.LoadingState - [Poseidon] Загружен контейнер 14/25
+2026-11-09 23:27:54 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 57/100
+2026-11-09 23:27:54 [pool-2-thread-3] DEBUG task.port.state.impl.UnloadingState - [Atlantic] Разгружен контейнер 24/30
+2026-11-09 23:27:54 [pool-2-thread-4] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 56/100
+2026-11-09 23:27:54 [pool-2-thread-4] DEBUG task.port.state.impl.LoadingState - [Viking] Загружен контейнер 9/10
+2026-11-09 23:27:54 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 55/100
+2026-11-09 23:27:54 [pool-2-thread-2] DEBUG task.port.state.impl.LoadingState - [Poseidon] Загружен контейнер 15/25
+2026-11-09 23:27:54 [pool-2-thread-4] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 54/100
+2026-11-09 23:27:54 [pool-2-thread-4] DEBUG task.port.state.impl.LoadingState - [Viking] Загружен контейнер 10/10
+2026-11-09 23:27:54 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 55/100
+2026-11-09 23:27:54 [pool-2-thread-3] DEBUG task.port.state.impl.UnloadingState - [Atlantic] Разгружен контейнер 25/30
+2026-11-09 23:27:54 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 54/100
+2026-11-09 23:27:54 [pool-2-thread-2] DEBUG task.port.state.impl.LoadingState - [Poseidon] Загружен контейнер 16/25
+2026-11-09 23:27:54 [pool-2-thread-4] INFO  task.port.state.impl.LoadingState - [Viking] Загрузка завершена.
+2026-11-09 23:27:54 [pool-2-thread-4] INFO  task.port.state.impl.DepartingState - [Viking] Отходит от причала №2...
+2026-11-09 23:27:54 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 55/100
+2026-11-09 23:27:54 [pool-2-thread-3] DEBUG task.port.state.impl.UnloadingState - [Atlantic] Разгружен контейнер 26/30
+2026-11-09 23:27:54 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 54/100
+2026-11-09 23:27:54 [pool-2-thread-2] DEBUG task.port.state.impl.LoadingState - [Poseidon] Загружен контейнер 17/25
+2026-11-09 23:27:54 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 55/100
+2026-11-09 23:27:54 [pool-2-thread-3] DEBUG task.port.state.impl.UnloadingState - [Atlantic] Разгружен контейнер 27/30
+2026-11-09 23:27:55 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 54/100
+2026-11-09 23:27:55 [pool-2-thread-2] DEBUG task.port.state.impl.LoadingState - [Poseidon] Загружен контейнер 18/25
+2026-11-09 23:27:55 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 55/100
+2026-11-09 23:27:55 [pool-2-thread-3] DEBUG task.port.state.impl.UnloadingState - [Atlantic] Разгружен контейнер 28/30
+2026-11-09 23:27:55 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 54/100
+2026-11-09 23:27:55 [pool-2-thread-2] DEBUG task.port.state.impl.LoadingState - [Poseidon] Загружен контейнер 19/25
+2026-11-09 23:27:55 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 55/100
+2026-11-09 23:27:55 [pool-2-thread-3] DEBUG task.port.state.impl.UnloadingState - [Atlantic] Разгружен контейнер 29/30
+2026-11-09 23:27:55 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 54/100
+2026-11-09 23:27:55 [pool-2-thread-2] DEBUG task.port.state.impl.LoadingState - [Poseidon] Загружен контейнер 20/25
+2026-11-09 23:27:55 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 55/100
+2026-11-09 23:27:55 [pool-2-thread-3] DEBUG task.port.state.impl.UnloadingState - [Atlantic] Разгружен контейнер 30/30
+2026-11-09 23:27:55 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 54/100
+2026-11-09 23:27:55 [pool-2-thread-2] DEBUG task.port.state.impl.LoadingState - [Poseidon] Загружен контейнер 21/25
+2026-11-09 23:27:55 [pool-2-thread-3] INFO  task.port.state.impl.UnloadingState - [Atlantic] Разгрузка завершена.
+2026-11-09 23:27:55 [pool-2-thread-3] INFO  task.port.state.impl.LoadingState - [Atlantic] Начинает загрузку 20 контейнеров на причале №1
+2026-11-09 23:27:55 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 53/100
+2026-11-09 23:27:55 [pool-2-thread-3] DEBUG task.port.state.impl.LoadingState - [Atlantic] Загружен контейнер 1/20
+2026-11-09 23:27:55 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 52/100
+2026-11-09 23:27:55 [pool-2-thread-2] DEBUG task.port.state.impl.LoadingState - [Poseidon] Загружен контейнер 22/25
+2026-11-09 23:27:55 [pool-2-thread-5] INFO  task.port.state.impl.WaitingForBerthState - [Titan] Пришвартовался к причалу №2
+2026-11-09 23:27:55 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 51/100
+2026-11-09 23:27:55 [pool-2-thread-4] INFO  task.port.state.impl.DepartingState - [Viking] Покинул порт.
+2026-11-09 23:27:55 [pool-2-thread-3] DEBUG task.port.state.impl.LoadingState - [Atlantic] Загружен контейнер 2/20
+2026-11-09 23:27:55 [pool-2-thread-5] INFO  task.port.state.impl.UnloadingState - [Titan] Начинает разгрузку 25 контейнеров на причале №2
+2026-11-09 23:27:55 [pool-2-thread-4] INFO  melnik.task.port.model.Ship - === Корабль [Viking] завершил работу ===
+2026-11-09 23:27:55 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 52/100
+2026-11-09 23:27:55 [pool-2-thread-5] DEBUG task.port.state.impl.UnloadingState - [Titan] Разгружен контейнер 1/25
+2026-11-09 23:27:55 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 51/100
+2026-11-09 23:27:55 [pool-2-thread-2] DEBUG task.port.state.impl.LoadingState - [Poseidon] Загружен контейнер 23/25
+2026-11-09 23:27:55 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 52/100
+2026-11-09 23:27:55 [pool-2-thread-5] DEBUG task.port.state.impl.UnloadingState - [Titan] Разгружен контейнер 2/25
+2026-11-09 23:27:55 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 51/100
+2026-11-09 23:27:55 [pool-2-thread-3] DEBUG task.port.state.impl.LoadingState - [Atlantic] Загружен контейнер 3/20
+2026-11-09 23:27:55 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 50/100
+2026-11-09 23:27:55 [pool-2-thread-2] DEBUG task.port.state.impl.LoadingState - [Poseidon] Загружен контейнер 24/25
+2026-11-09 23:27:56 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 49/100
+2026-11-09 23:27:56 [pool-2-thread-3] DEBUG task.port.state.impl.LoadingState - [Atlantic] Загружен контейнер 4/20
+2026-11-09 23:27:56 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 50/100
+2026-11-09 23:27:56 [pool-2-thread-5] DEBUG task.port.state.impl.UnloadingState - [Titan] Разгружен контейнер 3/25
+2026-11-09 23:27:56 [pool-2-thread-2] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 49/100
+2026-11-09 23:27:56 [pool-2-thread-2] DEBUG task.port.state.impl.LoadingState - [Poseidon] Загружен контейнер 25/25
+2026-11-09 23:27:56 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 48/100
+2026-11-09 23:27:56 [pool-2-thread-3] DEBUG task.port.state.impl.LoadingState - [Atlantic] Загружен контейнер 5/20
+2026-11-09 23:27:56 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 49/100
+2026-11-09 23:27:56 [pool-2-thread-5] DEBUG task.port.state.impl.UnloadingState - [Titan] Разгружен контейнер 4/25
+2026-11-09 23:27:56 [pool-2-thread-2] INFO  task.port.state.impl.LoadingState - [Poseidon] Загрузка завершена.
+2026-11-09 23:27:56 [pool-2-thread-2] INFO  task.port.state.impl.DepartingState - [Poseidon] Отходит от причала №3...
+2026-11-09 23:27:56 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 48/100
+2026-11-09 23:27:56 [pool-2-thread-3] DEBUG task.port.state.impl.LoadingState - [Atlantic] Загружен контейнер 6/20
+2026-11-09 23:27:56 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 49/100
+2026-11-09 23:27:56 [pool-2-thread-5] DEBUG task.port.state.impl.UnloadingState - [Titan] Разгружен контейнер 5/25
+2026-11-09 23:27:56 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 48/100
+2026-11-09 23:27:56 [pool-2-thread-3] DEBUG task.port.state.impl.LoadingState - [Atlantic] Загружен контейнер 7/20
+2026-11-09 23:27:56 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 49/100
+2026-11-09 23:27:56 [pool-2-thread-5] DEBUG task.port.state.impl.UnloadingState - [Titan] Разгружен контейнер 6/25
+2026-11-09 23:27:56 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 48/100
+2026-11-09 23:27:56 [pool-2-thread-3] DEBUG task.port.state.impl.LoadingState - [Atlantic] Загружен контейнер 8/20
+2026-11-09 23:27:56 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 49/100
+2026-11-09 23:27:56 [pool-2-thread-5] DEBUG task.port.state.impl.UnloadingState - [Titan] Разгружен контейнер 7/25
+2026-11-09 23:27:56 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 50/100
+2026-11-09 23:27:56 [pool-2-thread-5] DEBUG task.port.state.impl.UnloadingState - [Titan] Разгружен контейнер 8/25
+2026-11-09 23:27:56 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 49/100
+2026-11-09 23:27:56 [pool-2-thread-3] DEBUG task.port.state.impl.LoadingState - [Atlantic] Загружен контейнер 9/20
+2026-11-09 23:27:56 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 50/100
+2026-11-09 23:27:56 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 49/100
+2026-11-09 23:27:56 [pool-2-thread-3] DEBUG task.port.state.impl.LoadingState - [Atlantic] Загружен контейнер 10/20
+2026-11-09 23:27:56 [pool-2-thread-5] DEBUG task.port.state.impl.UnloadingState - [Titan] Разгружен контейнер 9/25
+2026-11-09 23:27:57 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 48/100
+2026-11-09 23:27:57 [pool-2-thread-3] DEBUG task.port.state.impl.LoadingState - [Atlantic] Загружен контейнер 11/20
+2026-11-09 23:27:57 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 49/100
+2026-11-09 23:27:57 [pool-2-thread-5] DEBUG task.port.state.impl.UnloadingState - [Titan] Разгружен контейнер 10/25
+2026-11-09 23:27:57 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 50/100
+2026-11-09 23:27:57 [pool-2-thread-5] DEBUG task.port.state.impl.UnloadingState - [Titan] Разгружен контейнер 11/25
+2026-11-09 23:27:57 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 49/100
+2026-11-09 23:27:57 [pool-2-thread-3] DEBUG task.port.state.impl.LoadingState - [Atlantic] Загружен контейнер 12/20
+2026-11-09 23:27:57 [pool-2-thread-2] INFO  task.port.state.impl.DepartingState - [Poseidon] Покинул порт.
+2026-11-09 23:27:57 [pool-2-thread-1] INFO  task.port.state.impl.WaitingForBerthState - [Neptune] Пришвартовался к причалу №3
+2026-11-09 23:27:57 [pool-2-thread-2] INFO  melnik.task.port.model.Ship - === Корабль [Poseidon] завершил работу ===
+2026-11-09 23:27:57 [pool-2-thread-1] INFO  task.port.state.impl.UnloadingState - [Neptune] Начинает разгрузку 20 контейнеров на причале №3
+2026-11-09 23:27:57 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 50/100
+2026-11-09 23:27:57 [pool-2-thread-1] DEBUG task.port.state.impl.UnloadingState - [Neptune] Разгружен контейнер 1/20
+2026-11-09 23:27:57 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 51/100
+2026-11-09 23:27:57 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 50/100
+2026-11-09 23:27:57 [pool-2-thread-5] DEBUG task.port.state.impl.UnloadingState - [Titan] Разгружен контейнер 12/25
+2026-11-09 23:27:57 [pool-2-thread-3] DEBUG task.port.state.impl.LoadingState - [Atlantic] Загружен контейнер 13/20
+2026-11-09 23:27:57 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 51/100
+2026-11-09 23:27:57 [pool-2-thread-1] DEBUG task.port.state.impl.UnloadingState - [Neptune] Разгружен контейнер 2/20
+2026-11-09 23:27:57 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 52/100
+2026-11-09 23:27:57 [pool-2-thread-5] DEBUG task.port.state.impl.UnloadingState - [Titan] Разгружен контейнер 13/25
+2026-11-09 23:27:57 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 51/100
+2026-11-09 23:27:57 [pool-2-thread-3] DEBUG task.port.state.impl.LoadingState - [Atlantic] Загружен контейнер 14/20
+2026-11-09 23:27:57 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 52/100
+2026-11-09 23:27:57 [pool-2-thread-1] DEBUG task.port.state.impl.UnloadingState - [Neptune] Разгружен контейнер 3/20
+2026-11-09 23:27:57 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 53/100
+2026-11-09 23:27:57 [pool-2-thread-5] DEBUG task.port.state.impl.UnloadingState - [Titan] Разгружен контейнер 14/25
+2026-11-09 23:27:57 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 52/100
+2026-11-09 23:27:57 [pool-2-thread-3] DEBUG task.port.state.impl.LoadingState - [Atlantic] Загружен контейнер 15/20
+2026-11-09 23:27:57 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 53/100
+2026-11-09 23:27:57 [pool-2-thread-1] DEBUG task.port.state.impl.UnloadingState - [Neptune] Разгружен контейнер 4/20
+2026-11-09 23:27:57 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 52/100
+2026-11-09 23:27:57 [pool-2-thread-3] DEBUG task.port.state.impl.LoadingState - [Atlantic] Загружен контейнер 16/20
+2026-11-09 23:27:57 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 53/100
+2026-11-09 23:27:57 [pool-2-thread-5] DEBUG task.port.state.impl.UnloadingState - [Titan] Разгружен контейнер 15/25
+2026-11-09 23:27:57 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 54/100
+2026-11-09 23:27:57 [pool-2-thread-1] DEBUG task.port.state.impl.UnloadingState - [Neptune] Разгружен контейнер 5/20
+2026-11-09 23:27:58 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 55/100
+2026-11-09 23:27:58 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 54/100
+2026-11-09 23:27:58 [pool-2-thread-5] DEBUG task.port.state.impl.UnloadingState - [Titan] Разгружен контейнер 16/25
+2026-11-09 23:27:58 [pool-2-thread-3] DEBUG task.port.state.impl.LoadingState - [Atlantic] Загружен контейнер 17/20
+2026-11-09 23:27:58 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 55/100
+2026-11-09 23:27:58 [pool-2-thread-1] DEBUG task.port.state.impl.UnloadingState - [Neptune] Разгружен контейнер 6/20
+2026-11-09 23:27:58 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 54/100
+2026-11-09 23:27:58 [pool-2-thread-3] DEBUG task.port.state.impl.LoadingState - [Atlantic] Загружен контейнер 18/20
+2026-11-09 23:27:58 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 55/100
+2026-11-09 23:27:58 [pool-2-thread-5] DEBUG task.port.state.impl.UnloadingState - [Titan] Разгружен контейнер 17/25
+2026-11-09 23:27:58 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 56/100
+2026-11-09 23:27:58 [pool-2-thread-1] DEBUG task.port.state.impl.UnloadingState - [Neptune] Разгружен контейнер 7/20
+2026-11-09 23:27:58 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 55/100
+2026-11-09 23:27:58 [pool-2-thread-3] DEBUG task.port.state.impl.LoadingState - [Atlantic] Загружен контейнер 19/20
+2026-11-09 23:27:58 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 56/100
+2026-11-09 23:27:58 [pool-2-thread-5] DEBUG task.port.state.impl.UnloadingState - [Titan] Разгружен контейнер 18/25
+2026-11-09 23:27:58 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 57/100
+2026-11-09 23:27:58 [pool-2-thread-1] DEBUG task.port.state.impl.UnloadingState - [Neptune] Разгружен контейнер 8/20
+2026-11-09 23:27:58 [pool-2-thread-3] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 56/100
+2026-11-09 23:27:58 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 57/100
+2026-11-09 23:27:58 [pool-2-thread-5] DEBUG task.port.state.impl.UnloadingState - [Titan] Разгружен контейнер 19/25
+2026-11-09 23:27:58 [pool-2-thread-3] DEBUG task.port.state.impl.LoadingState - [Atlantic] Загружен контейнер 20/20
+2026-11-09 23:27:58 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 58/100
+2026-11-09 23:27:58 [pool-2-thread-1] DEBUG task.port.state.impl.UnloadingState - [Neptune] Разгружен контейнер 9/20
+2026-11-09 23:27:58 [pool-2-thread-3] INFO  task.port.state.impl.LoadingState - [Atlantic] Загрузка завершена.
+2026-11-09 23:27:58 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 59/100
+2026-11-09 23:27:58 [pool-2-thread-3] INFO  task.port.state.impl.DepartingState - [Atlantic] Отходит от причала №1...
+2026-11-09 23:27:58 [pool-2-thread-5] DEBUG task.port.state.impl.UnloadingState - [Titan] Разгружен контейнер 20/25
+2026-11-09 23:27:58 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 60/100
+2026-11-09 23:27:58 [pool-2-thread-1] DEBUG task.port.state.impl.UnloadingState - [Neptune] Разгружен контейнер 10/20
+2026-11-09 23:27:58 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 61/100
+2026-11-09 23:27:58 [pool-2-thread-5] DEBUG task.port.state.impl.UnloadingState - [Titan] Разгружен контейнер 21/25
+2026-11-09 23:27:58 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 62/100
+2026-11-09 23:27:58 [pool-2-thread-1] DEBUG task.port.state.impl.UnloadingState - [Neptune] Разгружен контейнер 11/20
+2026-11-09 23:27:59 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 63/100
+2026-11-09 23:27:59 [pool-2-thread-5] DEBUG task.port.state.impl.UnloadingState - [Titan] Разгружен контейнер 22/25
+2026-11-09 23:27:59 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 64/100
+2026-11-09 23:27:59 [pool-2-thread-1] DEBUG task.port.state.impl.UnloadingState - [Neptune] Разгружен контейнер 12/20
+2026-11-09 23:27:59 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 65/100
+2026-11-09 23:27:59 [pool-2-thread-5] DEBUG task.port.state.impl.UnloadingState - [Titan] Разгружен контейнер 23/25
+2026-11-09 23:27:59 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 66/100
+2026-11-09 23:27:59 [pool-2-thread-1] DEBUG task.port.state.impl.UnloadingState - [Neptune] Разгружен контейнер 13/20
+2026-11-09 23:27:59 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 67/100
+2026-11-09 23:27:59 [pool-2-thread-5] DEBUG task.port.state.impl.UnloadingState - [Titan] Разгружен контейнер 24/25
+2026-11-09 23:27:59 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 68/100
+2026-11-09 23:27:59 [pool-2-thread-1] DEBUG task.port.state.impl.UnloadingState - [Neptune] Разгружен контейнер 14/20
+2026-11-09 23:27:59 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 69/100
+2026-11-09 23:27:59 [pool-2-thread-5] DEBUG task.port.state.impl.UnloadingState - [Titan] Разгружен контейнер 25/25
+2026-11-09 23:27:59 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 70/100
+2026-11-09 23:27:59 [pool-2-thread-1] DEBUG task.port.state.impl.UnloadingState - [Neptune] Разгружен контейнер 15/20
+2026-11-09 23:27:59 [pool-2-thread-5] INFO  task.port.state.impl.UnloadingState - [Titan] Разгрузка завершена.
+2026-11-09 23:27:59 [pool-2-thread-5] INFO  task.port.state.impl.LoadingState - [Titan] Начинает загрузку 30 контейнеров на причале №2
+2026-11-09 23:27:59 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 69/100
+2026-11-09 23:27:59 [pool-2-thread-5] DEBUG task.port.state.impl.LoadingState - [Titan] Загружен контейнер 1/30
+2026-11-09 23:27:59 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 70/100
+2026-11-09 23:27:59 [pool-2-thread-1] DEBUG task.port.state.impl.UnloadingState - [Neptune] Разгружен контейнер 16/20
+2026-11-09 23:27:59 [pool-2-thread-3] INFO  task.port.state.impl.DepartingState - [Atlantic] Покинул порт.
+2026-11-09 23:27:59 [pool-2-thread-3] INFO  melnik.task.port.model.Ship - === Корабль [Atlantic] завершил работу ===
+2026-11-09 23:27:59 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 69/100
+2026-11-09 23:27:59 [pool-2-thread-5] DEBUG task.port.state.impl.LoadingState - [Titan] Загружен контейнер 2/30
+2026-11-09 23:27:59 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 70/100
+2026-11-09 23:27:59 [pool-2-thread-1] DEBUG task.port.state.impl.UnloadingState - [Neptune] Разгружен контейнер 17/20
+2026-11-09 23:27:59 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 69/100
+2026-11-09 23:27:59 [pool-2-thread-5] DEBUG task.port.state.impl.LoadingState - [Titan] Загружен контейнер 3/30
+2026-11-09 23:27:59 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 70/100
+2026-11-09 23:27:59 [pool-2-thread-1] DEBUG task.port.state.impl.UnloadingState - [Neptune] Разгружен контейнер 18/20
+2026-11-09 23:28:00 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 69/100
+2026-11-09 23:28:00 [pool-2-thread-5] DEBUG task.port.state.impl.LoadingState - [Titan] Загружен контейнер 4/30
+2026-11-09 23:28:00 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 70/100
+2026-11-09 23:28:00 [pool-2-thread-1] DEBUG task.port.state.impl.UnloadingState - [Neptune] Разгружен контейнер 19/20
+2026-11-09 23:28:00 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 69/100
+2026-11-09 23:28:00 [pool-2-thread-5] DEBUG task.port.state.impl.LoadingState - [Titan] Загружен контейнер 5/30
+2026-11-09 23:28:00 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер добавлен на склад. Всего: 70/100
+2026-11-09 23:28:00 [pool-2-thread-1] DEBUG task.port.state.impl.UnloadingState - [Neptune] Разгружен контейнер 20/20
+2026-11-09 23:28:00 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 69/100
+2026-11-09 23:28:00 [pool-2-thread-5] DEBUG task.port.state.impl.LoadingState - [Titan] Загружен контейнер 6/30
+2026-11-09 23:28:00 [pool-2-thread-1] INFO  task.port.state.impl.UnloadingState - [Neptune] Разгрузка завершена.
+2026-11-09 23:28:00 [pool-2-thread-1] INFO  task.port.state.impl.LoadingState - [Neptune] Начинает загрузку 15 контейнеров на причале №3
+2026-11-09 23:28:00 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 68/100
+2026-11-09 23:28:00 [pool-2-thread-1] DEBUG task.port.state.impl.LoadingState - [Neptune] Загружен контейнер 1/15
+2026-11-09 23:28:00 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 67/100
+2026-11-09 23:28:00 [pool-2-thread-5] DEBUG task.port.state.impl.LoadingState - [Titan] Загружен контейнер 7/30
+2026-11-09 23:28:00 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 66/100
+2026-11-09 23:28:00 [pool-2-thread-1] DEBUG task.port.state.impl.LoadingState - [Neptune] Загружен контейнер 2/15
+2026-11-09 23:28:00 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 65/100
+2026-11-09 23:28:00 [pool-2-thread-5] DEBUG task.port.state.impl.LoadingState - [Titan] Загружен контейнер 8/30
+2026-11-09 23:28:00 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 64/100
+2026-11-09 23:28:00 [pool-2-thread-1] DEBUG task.port.state.impl.LoadingState - [Neptune] Загружен контейнер 3/15
+2026-11-09 23:28:00 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 63/100
+2026-11-09 23:28:00 [pool-2-thread-5] DEBUG task.port.state.impl.LoadingState - [Titan] Загружен контейнер 9/30
+2026-11-09 23:28:00 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 62/100
+2026-11-09 23:28:00 [pool-2-thread-1] DEBUG task.port.state.impl.LoadingState - [Neptune] Загружен контейнер 4/15
+2026-11-09 23:28:01 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 61/100
+2026-11-09 23:28:01 [pool-2-thread-5] DEBUG task.port.state.impl.LoadingState - [Titan] Загружен контейнер 10/30
+2026-11-09 23:28:01 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 60/100
+2026-11-09 23:28:01 [pool-2-thread-1] DEBUG task.port.state.impl.LoadingState - [Neptune] Загружен контейнер 5/15
+2026-11-09 23:28:01 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 59/100
+2026-11-09 23:28:01 [pool-2-thread-5] DEBUG task.port.state.impl.LoadingState - [Titan] Загружен контейнер 11/30
+2026-11-09 23:28:01 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 58/100
+2026-11-09 23:28:01 [pool-2-thread-1] DEBUG task.port.state.impl.LoadingState - [Neptune] Загружен контейнер 6/15
+2026-11-09 23:28:01 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 57/100
+2026-11-09 23:28:01 [pool-2-thread-5] DEBUG task.port.state.impl.LoadingState - [Titan] Загружен контейнер 12/30
+2026-11-09 23:28:01 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 56/100
+2026-11-09 23:28:01 [pool-2-thread-1] DEBUG task.port.state.impl.LoadingState - [Neptune] Загружен контейнер 7/15
+2026-11-09 23:28:01 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 55/100
+2026-11-09 23:28:01 [pool-2-thread-5] DEBUG task.port.state.impl.LoadingState - [Titan] Загружен контейнер 13/30
+2026-11-09 23:28:01 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 54/100
+2026-11-09 23:28:01 [pool-2-thread-1] DEBUG task.port.state.impl.LoadingState - [Neptune] Загружен контейнер 8/15
+2026-11-09 23:28:01 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 53/100
+2026-11-09 23:28:01 [pool-2-thread-5] DEBUG task.port.state.impl.LoadingState - [Titan] Загружен контейнер 14/30
+2026-11-09 23:28:01 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 52/100
+2026-11-09 23:28:01 [pool-2-thread-1] DEBUG task.port.state.impl.LoadingState - [Neptune] Загружен контейнер 9/15
+2026-11-09 23:28:01 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 51/100
+2026-11-09 23:28:01 [pool-2-thread-5] DEBUG task.port.state.impl.LoadingState - [Titan] Загружен контейнер 15/30
+2026-11-09 23:28:01 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 50/100
+2026-11-09 23:28:01 [pool-2-thread-1] DEBUG task.port.state.impl.LoadingState - [Neptune] Загружен контейнер 10/15
+2026-11-09 23:28:01 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 49/100
+2026-11-09 23:28:01 [pool-2-thread-5] DEBUG task.port.state.impl.LoadingState - [Titan] Загружен контейнер 16/30
+2026-11-09 23:28:02 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 48/100
+2026-11-09 23:28:02 [pool-2-thread-1] DEBUG task.port.state.impl.LoadingState - [Neptune] Загружен контейнер 11/15
+2026-11-09 23:28:02 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 47/100
+2026-11-09 23:28:02 [pool-2-thread-5] DEBUG task.port.state.impl.LoadingState - [Titan] Загружен контейнер 17/30
+2026-11-09 23:28:02 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 46/100
+2026-11-09 23:28:02 [pool-2-thread-1] DEBUG task.port.state.impl.LoadingState - [Neptune] Загружен контейнер 12/15
+2026-11-09 23:28:02 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 45/100
+2026-11-09 23:28:02 [pool-2-thread-5] DEBUG task.port.state.impl.LoadingState - [Titan] Загружен контейнер 18/30
+2026-11-09 23:28:02 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 44/100
+2026-11-09 23:28:02 [pool-2-thread-1] DEBUG task.port.state.impl.LoadingState - [Neptune] Загружен контейнер 13/15
+2026-11-09 23:28:02 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 43/100
+2026-11-09 23:28:02 [pool-2-thread-5] DEBUG task.port.state.impl.LoadingState - [Titan] Загружен контейнер 19/30
+2026-11-09 23:28:02 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 42/100
+2026-11-09 23:28:02 [pool-2-thread-1] DEBUG task.port.state.impl.LoadingState - [Neptune] Загружен контейнер 14/15
+2026-11-09 23:28:02 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 41/100
+2026-11-09 23:28:02 [pool-2-thread-5] DEBUG task.port.state.impl.LoadingState - [Titan] Загружен контейнер 20/30
+2026-11-09 23:28:02 [pool-2-thread-1] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 40/100
+2026-11-09 23:28:02 [pool-2-thread-1] DEBUG task.port.state.impl.LoadingState - [Neptune] Загружен контейнер 15/15
+2026-11-09 23:28:02 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 39/100
+2026-11-09 23:28:02 [pool-2-thread-5] DEBUG task.port.state.impl.LoadingState - [Titan] Загружен контейнер 21/30
+2026-11-09 23:28:02 [pool-2-thread-1] INFO  task.port.state.impl.LoadingState - [Neptune] Загрузка завершена.
+2026-11-09 23:28:02 [pool-2-thread-1] INFO  task.port.state.impl.DepartingState - [Neptune] Отходит от причала №3...
+2026-11-09 23:28:02 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 38/100
+2026-11-09 23:28:02 [pool-2-thread-5] DEBUG task.port.state.impl.LoadingState - [Titan] Загружен контейнер 22/30
+2026-11-09 23:28:03 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 37/100
+2026-11-09 23:28:03 [pool-2-thread-5] DEBUG task.port.state.impl.LoadingState - [Titan] Загружен контейнер 23/30
+2026-11-09 23:28:03 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 36/100
+2026-11-09 23:28:03 [pool-2-thread-5] DEBUG task.port.state.impl.LoadingState - [Titan] Загружен контейнер 24/30
+2026-11-09 23:28:03 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 35/100
+2026-11-09 23:28:03 [pool-2-thread-5] DEBUG task.port.state.impl.LoadingState - [Titan] Загружен контейнер 25/30
+2026-11-09 23:28:03 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 34/100
+2026-11-09 23:28:03 [pool-2-thread-5] DEBUG task.port.state.impl.LoadingState - [Titan] Загружен контейнер 26/30
+2026-11-09 23:28:03 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 33/100
+2026-11-09 23:28:03 [pool-2-thread-5] DEBUG task.port.state.impl.LoadingState - [Titan] Загружен контейнер 27/30
+2026-11-09 23:28:03 [pool-2-thread-1] INFO  task.port.state.impl.DepartingState - [Neptune] Покинул порт.
+2026-11-09 23:28:03 [pool-2-thread-1] INFO  melnik.task.port.model.Ship - === Корабль [Neptune] завершил работу ===
+2026-11-09 23:28:03 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 32/100
+2026-11-09 23:28:03 [pool-2-thread-5] DEBUG task.port.state.impl.LoadingState - [Titan] Загружен контейнер 28/30
+2026-11-09 23:28:04 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 31/100
+2026-11-09 23:28:04 [pool-2-thread-5] DEBUG task.port.state.impl.LoadingState - [Titan] Загружен контейнер 29/30
+2026-11-09 23:28:04 [pool-2-thread-5] DEBUG melnik.task.port.model.Warehouse - Контейнер забран со склада. Всего: 30/100
+2026-11-09 23:28:04 [pool-2-thread-5] DEBUG task.port.state.impl.LoadingState - [Titan] Загружен контейнер 30/30
+2026-11-09 23:28:04 [pool-2-thread-5] INFO  task.port.state.impl.LoadingState - [Titan] Загрузка завершена.
+2026-11-09 23:28:04 [pool-2-thread-5] INFO  task.port.state.impl.DepartingState - [Titan] Отходит от причала №2...
+2026-11-09 23:28:05 [pool-2-thread-5] INFO  task.port.state.impl.DepartingState - [Titan] Покинул порт.
+2026-11-09 23:28:05 [pool-2-thread-5] INFO  melnik.task.port.model.Ship - === Корабль [Titan] завершил работу ===
+2026-11-09 23:28:05 [main] INFO  edu.melnik.task.port.Main - ========================================
+2026-11-09 23:28:05 [main] INFO  edu.melnik.task.port.Main - Все корабли обслужены!
+2026-11-09 23:28:05 [main] INFO  edu.melnik.task.port.Main - Контейнеров на складе: 30/100
+2026-11-09 23:28:05 [main] INFO  edu.melnik.task.port.Main - ========================================

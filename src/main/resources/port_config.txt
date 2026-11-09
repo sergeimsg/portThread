@@ -1,0 +1,11 @@
+# Конфигурация порта
+warehouse_capacity=100
+warehouse_initial=30
+berths=3
+
+# Корабли: ship:имя:вместимость:контейнеры_на_разгрузку:контейнеры_на_загрузку
+ship:Neptune:50:20:15
+ship:Poseidon:40:10:25
+ship:Atlantic:60:30:20
+ship:Viking:45:15:10
+ship:Titan:55:25:30
